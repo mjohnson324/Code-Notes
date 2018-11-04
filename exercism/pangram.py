@@ -1,10 +1,8 @@
 def is_pangram(sentence):
-    character_hash = {}
+    alphas = set()
     for char in sentence:
-        if char in "abcdefghhijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ":
-            character_hash[lowercase_char] = True
-    for letter in "abcdefghijklmnopqrstuvwxyz":
-        letter_present = character_hash.get(letter, False)
-        if letter_present == False:
-            return False
-    return True
+        if char.isalpha():
+            alphas.add(char.lower())
+    print(alphas)
+    return True if len(alphas) == 26 else False
+
