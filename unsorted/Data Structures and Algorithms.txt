@@ -1,13 +1,13 @@
-Bit: binary digit 
-Byte: 8 bits (256 possible values) 
-Basis of storage is a byte 
+Bit: binary digit
+Byte: 8 bits (256 possible values)
+Basis of storage is a byte
 
-Encoding: Translating bytes to other characters 
-Octal, Hexadecimal, Base64, unicode, utf-8, etc. 
-2⁸ = 16² = 256 
-Hex: IP address, hexspeak for errors 
-Hex used for color codes because 256 values. 
-RGB is additive model (add colors), 3 bytes per color 
+Encoding: Translating bytes to other characters
+Octal, Hexadecimal, Base64, unicode, utf-8, etc.
+2⁸ = 16² = 256
+Hex: IP address, hexspeak for errors
+Hex used for color codes because 256 values.
+RGB is additive model (add colors), 3 bytes per color
 Red-Yellow-Blue is subtractive, used in printing
 
 Abstract Data Type- concept for storing data; the rules are what matter
@@ -30,18 +30,18 @@ Stack: "Last in, first out"
 	-Data type where data entries can only be added and removed individually from one end
 	-Key Methods: push, pop
 	Example: function calls in other functions, including recursive calls
-	Stacks - Simon says color game, backspace, language call stack 
-    Stack Frame - a function's slice of stack  
-    Stack (LIFO) - call stack, browsing history 
+	Stacks - Simon says color game, backspace, language call stack
+    Stack Frame - a function's slice of stack
+    Stack (LIFO) - call stack, browsing history
 
 Queue: "First in, first out"
 	-Data type where entries are added in one end and removed on the opposite end
 	-Key Methods: enqueue, dequeue
 	job scheduling (Rails, DMV, deli)
-    JS message queue (function order) 
-    Stack from queue 
-    OS queues: multi level priority 
-    Cyber Monday shopping 
+    JS message queue (function order)
+    Stack from queue
+    OS queues: multi level priority
+    Cyber Monday shopping
 
 Node- An object with data and pointers to other objects with data.
 	-They link together to form different data structures.
@@ -58,21 +58,21 @@ Trees:
 		Balanced Tree - Tree where the number of nodes on each side of the root is nearly equal and the difference in depth between the deepest left branch and right branch is not greater than one.
 	-Key Methods: Parent, value, left & right (binary)
 
-Root, parent, children, siblings, leaves 
-Childless nodes are leaves, others are internal 
-There are x-1 for x nodes 
-A tree is a recursive structure 
-Depth- number of edges a node is away from root 
-Height- number of edges from a node to its most distant leaf 
-Balanced trees are better for searching and insertion 
-Applications: OOP inheritance, folders 
-Binary trees useful for search and insertion 
-Tree - Node - root - left and right 
-Insertion: start at root, compare value, branch or insert 
-Binary search = divide and conquer 
-4 binary trees 
-Works because entries are ordered 
-In databases! B or t tree, indexing 
+Root, parent, children, siblings, leaves
+Childless nodes are leaves, others are internal
+There are x-1 for x nodes
+A tree is a recursive structure
+Depth- number of edges a node is away from root
+Height- number of edges from a node to its most distant leaf
+Balanced trees are better for searching and insertion
+Applications: OOP inheritance, folders
+Binary trees useful for search and insertion
+Tree - Node - root - left and right
+Insertion: start at root, compare value, branch or insert
+Binary search = divide and conquer
+4 binary trees
+Works because entries are ordered
+In databases! B or t tree, indexing
 
 	Traversal Methods:
 		1. Depth-First-Search (moving down left-most branch first)
@@ -151,3 +151,19 @@ Quick Sort: Sort a list in the fastest(?) time possible
 Traveling Salesman: O(N!)
 
 Amortization- A technique to optimize average-case insertions into a data structure. Increasing a contiguous structure proportionaly amount creates occasional slowdowns but most insertions will be constant-time.
+
+Graphs: Nodes connecting to whatever
+Not always a starting point! Nonlinear, not always directional
+Directed Graph: edges with direction
+Major rules: at least one node
+Singleton: graph with one node
+G = (V, E), a set of vertices and set of edges
+V = node, E = (node1, node2)
+Edge- connection between nodes
+Parentheses around edge pairs = ordered
+Facebook: undirected, Twitter: directed
+Path: origin node + edges to destination node
+Cycle: path where starting point is ending point
+Eulerian Cycle: cycle with no repeats except start
+Simple Path: don't repeat edges or nodes already traversed.
+Degrees- Number of a node's connections to other nodes
