@@ -152,6 +152,12 @@ Traveling Salesman: O(N!)
 
 Amortization- A technique to optimize average-case insertions into a data structure. Increasing a contiguous structure proportionaly amount creates occasional slowdowns but most insertions will be constant-time.
 
+Base Case: function is done; no recursive calls
+Recursive Case: function calls itself
+Call Stack: memory stack used by computers to store variable data in different functions
+Comes into play whenever function called in another function
+Variables in each function call are inaccessible to other functions in stack
+
 Graphs: Nodes connecting to whatever
 Not always a starting point! Nonlinear, not always directional
 Directed Graph: edges with direction
@@ -167,3 +173,24 @@ Cycle: path where starting point is ending point
 Eulerian Cycle: cycle with no repeats except start
 Simple Path: don't repeat edges or nodes already traversed.
 Degrees- Number of a node's connections to other nodes
+
+Memory: "drawers" with addresses (e.g. fe0ffeeb)
+Array: contiguous storage
+Because elements must be contiguous, adding new elements is challenging
+if memory slot taken up whole array must be moved to wherever it can fit
+Workaround: reserve more space (may waste memory or have to move anyway)
+Strength: instant lookup, random access
+Reading = O(1), Insertion = O(N), Deletion = O(N)
+Linked List: items go anywhere
+Strength: more manageable storage and additions
+items store addresses to next item to connect
++ No need to move items!
+Weakness: lookup (must start at #1 every time), sequential access
+Reading = O(N), Insertion = O(1), Deletion = O(1)
+Use a linked list if inserts matter more than lookup
+Use an array for random access
+
+Selection sort:
+1. select the first item best meeting the criteria (O(N))
+2. select the next item; do this repeatedly until none are left.
+This process takes O(N^2) time

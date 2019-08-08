@@ -1,6 +1,6 @@
 Famous Women Programmers:
 Katherine Johnson, NASA-
-Grace Hopper, Harvard- Rear Admiral, invented compiler, programmed Mark I
+Grace Hopper, Harvard- Rear Admiral, invented the compiler, programmed Mark I
 Frances Bilas Spence-
 Fran Allen, IBM-
 Mary Jackson, NASA-
