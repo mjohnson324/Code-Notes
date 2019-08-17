@@ -194,3 +194,75 @@ Selection sort:
 1. select the first item best meeting the criteria (O(N))
 2. select the next item; do this repeatedly until none are left.
 This process takes O(N^2) time
+
+Degrees can be odd or even
+
+To traverse an Eulerian circuit (cycle) where every path is traversed once and you end up at the same spot:
+
+Every vertex must have an even degree
+
+Every vertex must have more than 0 degrees
+
+For a simple path (every edge once) either all even or two odd and the rest even
+
+Graphs: relationships, modeling
+
+How to traverse to get the shortest path?
+
+
+
+np-complete: A problem with no better solution or no solution (traveling salesman)
+
+
+
+DFS applies to graphs too
+
+DFS: you need to read, update or sort
+
+Keep going down left (or right)
+
+Maybe good if you know a node is deep down
+
+
+
+Strategy- implementation of an algorithm
+
+DFS Strategies: all are permutations of the three things you can do at each node:
+
+1. read it (d)
+
+2. Look left (l)
+
+3. look right (r)
+
+The order of operations matters!
+
+root 6, l4, r5, l2, r3, l1, r8, l7, r9
+
+1. Pre order- dlr, 6421_358_7_9
+
+2. In order- ldr, ordered list!
+
+3. Post order- lrd, 13_25_4_79_8_6; Example: deletion, delete children first (left and right)
+
+Time Complexity: O(n), linear
+
+Space complexity: O(h), tree height
+
+
+
+BFS: level by level (graphs too) or in-level order, level-order traversal
+
+Might be better if you don't know a node's location
+
+Discovered node: nodes referenced for future processing (includes root)
+
+1. Read data
+
+2. Reference discovered nodes for later reading in a queue
+
+3. Repeat until all nodes discovered and processed
+
+Time: O(n)
+
+Space: O(w), width of tree
