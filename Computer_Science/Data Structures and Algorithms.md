@@ -266,3 +266,63 @@ Discovered node: nodes referenced for future processing (includes root)
 Time: O(n)
 
 Space: O(w), width of tree
+
+Hash Table: array + hash function
+
+Fast searching! Constant
+
+Function maps where data goes in array and also retrieves data quickly.
+
+Evenly distribute things in random buckets (indices)
+
+Buckets are unique and have unique keys
+
+Table size affects function output
+
+Example: remainder of book title length and array length used to determine bucket choice
+
+Collision: when two items go to same bucket
+
+Minimize collisions! Uneven distribution sabotages fast search
+
+Collision resolution - different techniques
+
+Resolution Types:
+
+Move over to the nearest bucket: linear probing but may be slow and promote clustering
+
+Clustering: when data in a few a buckets that are close together while rest of table empty
+
+Chaining - restructure table so multiple elements in one key via linked list. Add onto beginning of list
+
+Average O(1)
+
+How to manage list size?
+
+Hash functions should make it easy to compute fast for data insertion and retrieval (minimal collisions), handle all input data, and always return the same key when you insert an element into the same bucket
+
+Think about hash function before allocating more buckets
+
+
+
+Set: no duplicates, unordered collection
+
+Intersection- shared
+
+Union- shared and unshared
+
+Disjunctive Union- opposite of Union
+
+Difference / Relative complement- unshared one set
+
+Symmetric difference- unshared of both sets
+
+Set Theory in CS: relational databases (SQL and relational algebra based on set theory)
+
+Time Complexity: must look at all the things
+
+multi-set comparisons = O(n + m)
+
+Add, remove, find = O(1)
+
+Sets use hash tables to work
