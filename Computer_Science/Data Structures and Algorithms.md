@@ -326,3 +326,191 @@ multi-set comparisons = O(n + m)
 Add, remove, find = O(1)
 
 Sets use hash tables to work
+
+Out of place algorithm - when algorithm does operation on copy
+
+
+
+In place- less memory, usually constant, but alters data
+
+
+
+Sorting - organizing items by a common comparable property in order
+
+Output is a list
+
+A sorted list is a permutation of a list
+
+Data must be homogeneous
+
+
+
+Motivation: Data operations (reading and retrieval, addition, removal) are faster
+
+
+
+6 Properties of Sorting Algorithms:
+
+1. Time complexity
+
+2. Space complexity
+
+3. Stability- what if two elements are equal? Algorithms that preserve the relative order of equal elements. Stable means output guaranteed to do this. Why unstable? Because of fragmentation of datasets
+
+4. Internal or external? - Does it use main memory (RAM) or rely on external memory?
+
+5. Recursive or not?- d & c
+
+6. Comparison or not?- comparison operators used? Non comparator example- radix sort (digits, not comparators)
+
+Examples:
+
+Selection Sort: go through items, find smallest, swap with first element, repeat
+
+O(n²/2)
+
+
+
+Bubble Sort- compare all adjacent elements by size; big numbers bubble up, O(n²)
+
+
+
+Insertion sort - 2 sets: sorted and unsorted, iterates through unsorted to insert in proper place in sorted place.
+
+2 explicit sublists (selection focuses on what item, insertion on where) place by comparing to current sorted items
+
+O(n²)
+
+
+
+Merge sort - splits unsorted set into halves, sorts halves, merges to whole via recursion
+
+Divide and conquer, down to smallest subset e.g. 1 number
+
+This smallest subset is sorted
+
+"Conquer" aka merge into larger lists
+
+Compare and then merge each list. If more than 1, compare 1st element of each list, then compare elements in each with pointers for each list
+
+2 functions: mergesort and merge
+
+O(n logn) - closer to linear than quadratic
+
+
+
+Quick sort - divide and conquer, partition by pivot, two lists
+
+Pivot is critical; ideal choice is median
+
+You want a pivot near the middle, otherwise quadratic because of uneven sublists
+
+Each list gets another pivot in the same way as the first list
+
+Repeat until every pivot finds its place and fuse back together
+
+Instead of new array, swap with pointers
+
+Left pointer 1st, bigger? If not move on, if yes prepare to swap
+
+Right next, smaller? If not move on, if yes prepare to swap
+
+e.g. 91625
+
+If left bigger and right smaller, swap
+
+We want to swap smaller with bigger
+
+21695
+
+Now L1 R6: both good, do nothing
+
+When pointers intersect L >= R, swap pivot with L
+
+21596
+
+Now 21 and 96: just swap
+
+O(n logn to n²) n² - comparing pivot to everything else
+
+41253 - 4 & 2 swap
+
+21453 - 1 & 4 - good, move on
+
+21354 - swapped pivot and 4
+
+21, 54
+
+1. Don't use with sorted or nearly sorted lists
+
+2. Sort sublists in parallel (parallel in quicksort)
+
+3. Pick a sensible median based on the data, such as picking through last several elements
+
+
+
+Heaps: Binary tree with special rules:
+
+1. Nodes must be arranged in specific order - based on root node. Heap Order Property: how the root node compares to other nodes. Root and all parents must be >= children or <= children in value
+
+2. Complete shape - every level is filled with nodes before new levels get filled, and left must be filled first
+
+(queues, trees, binary search)
+
+Minheap - Heap with root as minimum
+
+Maxheap
+
+• Duplicates allowed
+
+• Left child can be bigger than right child
+
+Heaps - normally you grow and shrink them
+
+
+
+Growth- insert into bottom left-most space and check value.
+
+
+
+Maxheap- if bigger, swap with parent. Continue until smaller
+
+
+
+Heapifying Up- swapping up with parents
+
+Heapify down- deleting a node!
+
+Usually deleting the root node, but you can't just delete nodes arbitrarily
+
+Safe Spot- next bottom left-most opening
+
+You can swap root with safe spot for deletion, then heapify node down to right place
+
+
+
+Represent heaps as arrays- because queues and indices
+
+Ordering- max/min value, root at 0, use index to place other nodes (parent I, child left 2i+1, right 2i+2; parent: floor of (i-1)/2 )
+
+Priority Queue: queue with weight/ priority dictating order of dequeing
+
+Heaps can be represented as priority queues (lookup of max or min: O(1); insertion and deletion: O(logn))
+
+
+
+Heapsort: Sorting the nodes by finding and sorting the next-largest node repeatedly, starting with unsorted collection to make a maxheap using formulas
+
+Starts by making binary tree and heapifies it
+
+3 19 1 14 >
+
+19, 14, 3, 1 (step 1)
+
+Step 2- take values and place in array
+
+Swap root and smallest node, then change (change index of heap)
+
+1 14 3 19 > 14 1 3 19 > 3 114 19 (swap 14 with 3, change index) > 1 3 14 19
+
+Heap sort is like selection sort but nlogn
