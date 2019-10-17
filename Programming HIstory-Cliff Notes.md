@@ -18,8 +18,7 @@ An overview of important events and people in the history of computing. By no me
 * **Margaret Hamilton**- NASA, coded Apollo 11's path to the moon
 * **Latania Sweeney** - data deidentification experiment
 
-* Susan Wojcicki- Google, marketing manager, Adwords & Adsense (money pit)
-
+* **Susan Wojcicki**- Google, marketing manager, Adwords & Adsense (money fountain)
 
 ## Internet
 

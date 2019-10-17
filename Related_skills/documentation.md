@@ -1,10 +1,28 @@
-6/22:
-Documenting python code 
-https://realpython.com/documenting-python-code/#commenting-vs.-documenting-code
+# Documentation
 
-- Comments are not documentation. Comments help project maintainers understand past design decisions and what the code is doing. 
-- Documenting code helps end-users understand your API.
-- For light and accessible documentation Python uses docstrings, consisting of triple-double quotes (""") to document code within the code itself.
-- By convention, docstrings are placed at the top of an object's definition (such as a class or function). Docstrings placed this way will be printed when the user checks an object's definition with the built-in "help" function.
-- The more public your project the more critical good documentation is. All projects should at least include a Readme giving an overview, and code samples illustrating how the API works. More public projects should also include further details such as how to contribute and more extensive reference material.
-- Example documentation: https://docs.djangoproject.com/en/2.2/
+* Comments are not documentation. Comments help project maintainers understand working code and past design decisions.
+* Documenting code helps end-users understand your API.
+
+
+## Good Documentation Checklist
+
+* [ ] A README providing an overview
+* [ ] Code illustrating how the API works
+* [ ] Contribution guidelines
+* [ ] Reference materials
+
+## Production READMEs
+
+* [ ] Brief explanation of what the app is and does
+* [ ] Link to live site
+* [ ] Technology stack
+* [ ] Delve deep into a couple features. Discuss both the challenges faced and your solutions.
+* [ ]Code snippets to highlight your best code
+
+### Pitfalls to avoid
+
+* Do not list out every single feature on your app.
+* No screenshots, only screen clippings.
+* Present your work as professional.
+* For features you have yet to implement, list them at the bottom as future directions for the project.
+* Markdown rendering errors

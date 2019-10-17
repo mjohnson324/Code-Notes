@@ -1,6 +1,10 @@
-Server-Side Rendering- When web pages are rendered by the server instead of the browser
+# Web Development
 
-Model of MVC Frameworks:
+* Server-Side Rendering- When web pages are rendered by the server instead of the browser
+
+## MVC
+
+Key Components:
 Database <-> Model <-> Controller <-> View
 Browser <-> Server -> Router/Dispatcher -> Controller -> Server
 
@@ -9,7 +13,7 @@ Model connects to Controller connects to Views, then Controller delivers assets 
 Model validations prevent database errors
 
 API- Server that provides non-UI information
-	Endpoint- A view that produces JSON
+Endpoint- A view that produces JSON
 
 Uniform Resource Identifier- The identifier of a primary resource
 Fragment Identifier- A string of characters referring to a resource subordinate to a primary resource.
@@ -26,11 +30,5 @@ checks routes
 initializes controllers
 call the right action in a controller
 error raised if no appropriate controller found
-
-ReST- representational state transfer. A stateless communication standard for the web permitting independent client and server implementation. Separates data storage and UI concerns.
-Parts:
-	HTTP Verb describing the desired operation
-	Header, Path, (optional) message body
-	Verbs: Post, Get, Put/Patch, Delete (maps to CRUD)
 
 Strong Params: When only certain params are accepted in a query

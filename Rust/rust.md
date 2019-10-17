@@ -1,24 +1,28 @@
-Rustacean: a Rust Programmer
+# Rust
 
-Useful Terminal Commands:
-rustup update (to update rust toolchain installer)
-rustc --version (see current version)
-rustup doc (offline documentation)
-rustc file_name (to compile code)
+* **Rustacean**- a Rust Programmer
+* **Crates**- rust code packages, like Ruby gems
+* **Cargo**- build system and package manager for rust
 
-cargo new _name_ (start project with git repo and main.rs, --bin to specify binary)
-cargo run (build and execute cargo project)
-cargo build (to just build the)
-cargo check (to see if a project checks out)
-cargo update (to newer compatible versions)
+## Useful Terminal Commands
 
-Syntax:
-main- 1st function in any Rust program
-!- macro designation (metaprogramming, println!, etc.)
-::<_type_>- turbofish, for explicit typing
+* Update toolchain installer: `rustup update`
+* Offline Documentation: `rustup doc`
+* Compile code: `rustc file_name`
 
-Crates- rust code packages, like Ruby gems
-Cargo- build system and package manager for rust
-	-Default build folder is  for debugging, release is for production
-	-Package section requires name, version, & authors
-	-Cargo lock tracks dependencies and ensures consistent dependencies
+## Syntax
+
+* **main**- 1st function in any Rust program
+* **!**- macro designation (metaprogramming, println!, etc.)
+* **::<_type_>**- turbofish, for explicit typing
+
+## Cargo
+
+* Start a project with cargo: `cargo new _name_`
+* Build and run cargo project: `cargo run`
+* Build project without running: `cargo build`
+* Verify your code: `cargo check`
+* Update cargo: `cargo update`
+
+* The default build folder is  for debugging while the release folder is for production environments
+* Cargo lock tracks dependencies and ensures consistent dependencies
