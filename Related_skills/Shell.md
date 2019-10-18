@@ -19,7 +19,6 @@
 * `&&`- AND
 * `;;`- Ends case statements
 
-
 ## Redirection Operators: command _ file
 
 * `|&`- Passes standard output and error

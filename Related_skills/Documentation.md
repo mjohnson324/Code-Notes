@@ -3,7 +3,6 @@
 * Comments are not documentation. Comments help project maintainers understand working code and past design decisions.
 * Documenting code helps end-users understand your API.
 
-
 ## Good Documentation Checklist
 
 * [ ] A README providing an overview
