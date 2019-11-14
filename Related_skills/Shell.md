@@ -1,4 +1,4 @@
-# Bash
+# Shell
 
 * **Root**- The parent directory
 * **Working Directory**- Directory in which you currently reside
@@ -65,3 +65,10 @@
 
 * **man** _command_
   * Look up documentation on commands in the terminal
+
+## zsh
+
+Switching between bash and zsh: `sudo chsh -s /bin/zsh or bash $USER`
+Configuring zsh: `autoload -Uz zsh-newuser-install`
+`zsh-newuser-install -f`
+Understanding the completion system: `zshcompsys manual page`

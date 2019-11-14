@@ -1,5 +1,7 @@
+# Big O Analysis
+
 An approximation of an algorithm's speed relative to the size of its input.
--The number of steps (calculations, like 2 + 2 or lookup) which must be performed to complete an algorithm based on its input 
+-The number of steps (calculations, like 2 + 2 or lookup) which must be performed to complete an algorithm based on its input
 -A basic operation takes one step
 -We are mainly concerned with the worst-case scenario.
 
@@ -22,3 +24,11 @@ Linearithmic, O(n logn) -Characteristic of the best sorting algorithms
 Quadratic, O(n^2)
 Exponential, O(X^n)
 Factorial, O(n!)
+
+## Rankings
+
+1. Constants
+2. Small Terms
+3. Polynomials of different degrees $n^a < n^b$
+4. Polynomials vs exponents $n^a < b^n$
+5. Logarithms vs polynomial $log(n) < n^b$
