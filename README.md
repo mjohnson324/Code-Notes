@@ -11,3 +11,8 @@ Notes span multiple subjects including concepts, algorithms, programming languag
 * [ ] SQL and databases
 * [ ] Cryptography directory
 * [ ] Computer science directory
+
+Versioning: X.Y.Z
+X - breaking changes
+Y - non-breaking changes
+Z - patches

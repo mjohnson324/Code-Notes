@@ -25,3 +25,5 @@ Basic: match exact text and directories indicated
 `**` - matches directory structure anywhere in the project
 `[]` - matches multiple combinations of ranges of characters specified
 `?` - matches single characters (length-specific, not character-specific)
+
+**Git-secret** - A tool for storing secrets like keys

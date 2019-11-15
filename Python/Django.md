@@ -40,3 +40,6 @@
 1. Stateless (testing) - but requires constant password usage
 2. HTTP (simple sites) - cookies used for auth; only allows single sessions
 3. Signed Tokens (default) - Permits single validation and multiple sessions but does not expire
+
+runserver is used for testing django apps in development, not running in production
+Flask is stateless and django has state
