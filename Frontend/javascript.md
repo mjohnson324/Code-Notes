@@ -1,7 +1,13 @@
-Primitive Types- numbers, strings, booleans, NaN, and null
-Falsy Values: 0, "", null, false, NaN, undefined
-bind() - Function used to bind a function to its current context
-apply and call- Functions used to apply a different object to this.
+# JavaScript
+
+The dominant language of the web, so we're basically stuck with it.
+
+## Key Features
+
+- Primitive Types- numbers, strings, booleans, NaN, and null
+- Falsy Values: 0, "", null, false, NaN, undefined
+- bind() - Function used to bind a function to its current context
+- apply and call- Functions used to apply a different object to this.
 
 -NaN is not equal to itself
 -Stick with const by default; let otherwise
@@ -18,3 +24,5 @@ Event delegation- Binding an event handler to a parent container that triggers o
 Bubbling- An event triggered on an element propogates ("bubbles") up to parents
 
 Current Target vs Target: The target is the deepest triggering element while `current targert` is the element with the event handler.
+
+-Use /* eslint rule: setting */ to add custom eslint rules to specific documents

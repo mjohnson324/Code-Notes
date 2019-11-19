@@ -1,3 +1,13 @@
+# React
+
+A frontend library that simplifies composing views.
+
+Organize files by feature for less folder opening
+Imports:
+1. From node libraries
+2. From directories higher up
+3. From same directory
+
 Organize components by feature.
 todos/
   components/

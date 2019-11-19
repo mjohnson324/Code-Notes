@@ -39,3 +39,7 @@ For details on specific elements refer to the [Mozilla Development Network](http
 - **Div**- For everything else; the generic element
 - **Lists** *(ordered, unordered, definitions)*- self-explanatory
 - **Media**- Includes *images*, *video*, *audio*, *math*, *canvas*, and *svg*
+
+## Tips
+
+- Assign `rel="noopener noreferrer"` for anchors to prevent hacks when _blank is set as target
