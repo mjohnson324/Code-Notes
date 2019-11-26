@@ -17,6 +17,7 @@ Press **ESC** to enter normal mode. Takes you out of insert mode and cancels com
 
 ## Basic Commands
 
+:!<command> Enter a terminal command and immediately return to vim
  Type | Key | Description
 ----------------------------
 Movement | h | left 
