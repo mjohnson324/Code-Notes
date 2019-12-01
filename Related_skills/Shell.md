@@ -66,6 +66,12 @@
 * **man** _command_
   * Look up documentation on commands in the terminal
 
+* **du** _file_
+  * Displays file size. Can list multiple files at once. Examines directory recursively.
+  * s to show summary data (doesn't blow up terminal)
+  * h for a human-readable format
+  * c for a cumulative tally
+
 ## zsh
 
 Switching between bash and zsh: `sudo chsh -s /bin/zsh or bash $USER`
