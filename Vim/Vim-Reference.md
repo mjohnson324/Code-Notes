@@ -3,16 +3,11 @@
 ## Global
 
 - **:help keyword** - open help for keyword
-- **:saveas file** - save file as
-- **:close** - close current pane
 - **K** - open man page for word under the cursor
 
 ## Cursor movement
 
-- **h** - move cursor left
-- **j** - move cursor down
-- **k** - move cursor up
-- **l** - move cursor right
+- **hjlk** - move cursor
 - **H** - move to top of screen
 - **M** - move to middle of screen
 - **L** - move to bottom of screen
