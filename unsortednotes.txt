@@ -1,0 +1,63 @@
+du -sh path
+mv files/pattern folder
+kill pid
+kill -9 pid
+ps: pid = process id
+cmd = application
+time = CPU usage
+tty = terminal of process
+Get output as variable: var=$(terminal output) | <command>
+
+Rename files in bulk:
+\ls | vim -
+:%s/<names>/mv -i <pattern> <output>/g
+:w !sh
+Use & to refer to names in pattern and output
+a in Vim applies to all tabs (:qa closes all)
+Moving lines:
+:<optional range>m <destination>
+
+From Accessibility Paper:
+There are a lot of disabled people, enough to establish a second Facebook
+They make bank
+Designing for them improves websites for everyone.
+Writing Guidelines:
+Use direct and succinct sentences
+Use bulleted lists
+Place the main point and keywords at the beginning of elements!
+Repetitive phrasing annoys users
+Use empty alts for decorative elements
+Don't expect users to know what "navigation" means. Try "skip to main content" instead.
+Users search by subject matter and stop after a few words. This can make questions annoying (think "NYHAIS - Who are we?" Instead of "Who we are")
+Reader Guidelines:
+Screen Readers = Vim. They have one mode for reading and another for typing!
+Minimize the number of links per page. Screen readers count them.
+Know screen reader features, and that users rarely know all of them.
+Spell properly where possible. Screen readers get confused by combo words. <acronym> and <abbr> tags help!
+Screen readers can get confused by alt-tags and text that don't match. Match them!
+Screen readers interpret page refreshes as new pages. Prevent it if users are scanning the same page.
+Design:
+Make one website accessible. No one wants the text version.
+Readers can make lists of page links. Make the text inside of them descriptive.
+Anchor links: essential for navigating multi-subject pages.
+Headers: clear, meaningful, parallel. This makes finding relevant subjects a lot easier.
+Forms: near the beginning of a page. Why? Because users may try to scan the whole page instead of using a command to find them.
+Inputs: use labels! Add extra information with title attributes. Switching reader modes to check fields is overkill.
+
+
+du -sh <path>: Get directory size in human-readable format
+df: Get remaining disk space.
+
+Vim:
+-p for new tab, -o for new window
+Vim has fuzzy completion, so partial spelling works if Vim can map to the full word
+<C-W> = rezise all windows equally
+:verbose shows option
+:tabs lists tabs
+:tabn, :tabp cycles
+:tabedit <file> opens file in new tab
+<ctrl-w> hjkl, w cycles
+:noh
+Tabs take priority over windows. In a given tab only one file name is displayed.
+:<,>:s/$/,/ places commas at the end of the given line range.
+autocmd BufRead,BufNewFile *.<type> set filetype=<type>
