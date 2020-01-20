@@ -514,3 +514,44 @@ Swap root and smallest node, then change (change index of heap)
 1 14 3 19 > 14 1 3 19 > 3 114 19 (swap 14 with 3, change index) > 1 3 14 19
 
 Heap sort is like selection sort but nlogn
+
+# Algorithms
+
+Euclidean Algorithm- Divide A by B to get the remainder. Divide by the remainder repeatedly until no remainder is left
+Greatest Common Denominator-
+
+Recurrence Relation- An equation recursively defining a sequence of values
+
+## Common Runtimes in Seconds
+
+| Number of Steps | $n$ | $n log(n)$ | $n^2$ | $2^n$ |
+|-----------------|---|------------|-----|-----|
+| 20 | 1 | 1 | 1 | 1 |
+| 50 | 1 | 1 | 1 | 13 Days |
+| 100 | 1 | 1 | 1 | 4 $10^{13}$ years |
+| $10^6$ | 1 | 1 | 17 minutes | **no** |
+| $10^9$ | 1 | 30 | 30 years | **no** |
+
+## Greedy Algorithms
+
+## Divide and Conquer
+
+Subproblem- similar problem of a smaller size
+
+Sorting- Permutation of a sequence in order
+
+Selection Sort- Find the minimum value, swap with the first element and repeat with the remaining elements
+Binary Search-
+
+Hash Function- A function that can map data of any size onto data of a fixed size. Hash functions are:
+1. Deterministic- The same input always results in the same output (useful for identification)
+2. Uniform- All outputs are equally likely
+3. One-Way- You cannot predict the input from the output
+4. Comprehensive- Incorporates all available data
+5. Continuity- outputs are non-similar
+
+Hash Collision- when different inputs to a hash function produce the same hash
+Cryptographic hashing minimizes collisions
+90% of users use the 1000 most common passwords
+Rainbow Table- Table of hashing functions and digests of common passwords
+Salting- When random bits are added to a password prior to hashing. Repeated salting makes it more difficult to decrypt a password

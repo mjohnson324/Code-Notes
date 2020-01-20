@@ -70,3 +70,12 @@
 * **HTTP**- Hyper Text Transfer Protocol
   * Content length of HTTP Header = # octets, != # characters
 * **SSH**- Secure Socket Shell- Secure remote access protocol
+
+Image Summary:
+
+Layer
+
+Application HTTP Format data request and response
+Transport TCP Deliver data between client and server
+Internet IP Address client and server
+Link Ethernet Map request to physical network
