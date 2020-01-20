@@ -28,49 +28,68 @@ Commands can be chained.
 Movements can be multiplied with numbers.
 operator-number-motion: perform given action number times.
 If lines are selected in visual mode they will be saved via :w FILENAME
-To turn off an option in vimrc, prepend “no” (e.g. noic 
+To turn off an option in vimrc, prepend “no” (e.g. noic
 
 Command Mode
 control-R: redo
 u - undo
 z- fold (follow with a,c,o,r,m, or their caps to fold in different ways)
 
+Macros:
+q: Record a macro and register it to a-z.
+@: Play a macro recorded under a-z.
+
+Non-Typing Text Operations (Cut, Paste, Delete, etc.)
 d: cut
 dd: cut line
-D: delete from cursor to end of line
+D: Cut from cursor to end of line
 y: copy selection
 Y: copy line
-p: paste after cursor
-P: paste on cursor
-r: replace character under cursor
-R: replace successive characters in replace mode
-c: change (deletes text in motion, enter insert mode)
+p: Paste after cursor
+P: Paste on cursor
+J: Join selected lines (next one to current one by default)
+r: Replace character under cursor
+x/X: Delete/backspace
+~: Toggle case
+>/<: Indent/unindent lines. Responds to motion commands.
 
-(/): move to the next/previous sentence
+(/): move to the next/previous sentence as defined by periods.
 {/}: move to the next/previous paragraph (separated by newlines)
 control-f/control-b: move forward/backward one page
 gg: move to start of file
 #G: move to line # (end of file if no number)
 hjkl: movement keys
 H: move to top of window
+M: move to middle of window
 L: move to bottom of window
 $: end of line
 0: start of line
+^: start of line excluding whitespace
 w: start of next word
 e: end of current word
+b: previous word
+f/F/t/T: find next/previous character. T and t stop before the character.
+W/E/B: only accounts for whitespace
 control-o: retrace steps backward
 control-i: retrace steps forward
 %: move to next matching bracket
+*/#: find next/previous instance of word under cursor.
+m: set marks using a-z
+`: move to mark set by m
+[[/]]: Jump to next/previous { in column 0.
 
 Insertion
 A: insert at end of line
 I: insert before 1st non-space character
 o: insert on new line below
 O: insert on new line above
+R: replace mode
+s: Delete character under cursor, enter insert mode
+c: change (delete/insert)
+S: change whole line
+C: Change to end of line.
 
-Visual Mode:
+Visual Mode: Operators act automatically on visual selections
 v: enter visual mode (cursor)
 V: select whole lines
 control-v: select columns (move cursor down and only high characters in same column)
-v>/<: Indent lines right/left 
-
