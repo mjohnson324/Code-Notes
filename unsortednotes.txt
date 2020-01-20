@@ -61,3 +61,5 @@ Vim has fuzzy completion, so partial spelling works if Vim can map to the full w
 Tabs take priority over windows. In a given tab only one file name is displayed.
 :<,>:s/$/,/ places commas at the end of the given line range.
 autocmd BufRead,BufNewFile *.<type> set filetype=<type>
+
+Artificial Narrow Intelligence = Machine Learning
