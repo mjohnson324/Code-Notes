@@ -1,3 +1,4 @@
+# Key Blockchain Terms
 Blockchain- a distributed ledger, immutable database
 Genesis Block- 1st block in a chain
 Hub and Spoke- Design pattern for smart contracts
@@ -41,25 +42,15 @@ c. Consensus (proof of work, longest-chain rule, nodes re-validate each block)
 Ethereum:
 Smart Contract- Program on a node for handling transactions
 	-Remember, contracts that are uploaded cannot be taken down
-	-Contracts are typically ~100 lines long (storage costs $)
-	-Verifying contracts is a challenge
 Gas (unit)- Work measurement
+	-Gas unit not $; gwei Eth assigned to gas units to prioritize work
 Limit- work requested over network
 Price- Eth you auction up to get work done
 Transaction cost = Price * Limit
-	-A way of controlling network usage to prevent overload (Ethereum computation resources limited)
-	-Assigned to work requests on network
-	-Gas unit not $; gwei Eth assigned to gas units to prioritize work
+	-A way of controlling network usage to prevent system overload.
 	-Transaction costs determine what gets done first
 	-Low gas limits lead to failures (lost Eth/failed transaction) if transactions take longer than estimated
-	-High Limits could mean lost $$; trick is to accurately estimate costs
+	-High Limits could mean lost $$ 
 
-IPFS:
--Why interplanetary? Cached files/distributive!
-Location Based Addressing- specifying location of content (how web 2.0 handles requests)
-Content Based Addressing- specify content using hash for lookup and security
-IPFS Object- Store data in 256 kb chunks with links to other objects
-	-Prevents duplication
-Versioning- method for updating a file
-	-Added files can never be unchanged
-	-Updated files have commit objects pointing to previous version
+IPFS: Interplanetary File System
+A distributed file storage system

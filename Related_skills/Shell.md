@@ -78,3 +78,24 @@ Switching between bash and zsh: `sudo chsh -s /bin/zsh or bash $USER`
 Configuring zsh: `autoload -Uz zsh-newuser-install`
 `zsh-newuser-install -f`
 Understanding the completion system: `zshcompsys manual page`
+
+du -sh path
+mv files/pattern folder
+kill pid
+kill -9 pid
+ps: pid = process id
+cmd = application
+time = CPU usage
+tty = terminal of process
+Get output as variable: var=$(terminal output) | <command>
+
+Rename files in bulk:
+\ls | vim -
+:%s/<names>/mv -i <pattern> <output>/g
+:w !sh
+Use & to refer to names in pattern and output
+a in Vim applies to all tabs (:qa closes all)
+
+du -sh <path>: Get directory size in human-readable format
+df: Get remaining disk space.
+

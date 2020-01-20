@@ -1,3 +1,167 @@
+# VIM: The Text Editor of Pros, or a Waste of Time?
+
+Notes on Vim commands. Typed in Vim!
+
+## Modes
+
+1. **Normal**: Execute commands
+2. **Insert**: Insert text
+
+Press **ESC** to enter normal mode. Takes you out of insert mode and cancels commands.
+
+## Concepts
+
+**Operator-Motion**: A pattern followed by many vim commands. The
+operator defines the change command and the motion defines what text to
+operate on. For example, _d motion_ deletes different sets of characters
+depending on the motion.
+
+**Counts**: Motions can be executed repeatedly if preceded by numerical counts. For example, _3$_ moves to the end of the line for the next three lines. For operators the number precedes the motion e.g. _d # motion_
+
+## Basic Commands
+
+:!<command> Enter a terminal command and immediately return to vim
+Type | Key | Description
+----------------------------
+Movement | h | left
+| j | down
+| k | up
+| l | right
+| w | move to start of next word
+| e | move to end of current word, or the next word if at the end
+| $ | move to the end of the line
+| 0 | move to the start of the line. **Doesn't respond to counts**.
+Exiting Vim | :q | quit
+| :q! | quit without saving changes
+| :wq | quit and save changes
+| :w | save changes without quitting
+Insertion | i | insert text before the cursor
+| a | insert text after cursor
+| A | append text to end of line
+| p | Put. Pastes the last set of text deleted after the cursor.
+| r | Replace character at the cursor. Type _r_ followed by the character you want to substitute.
+Deletion | x | delete character before the cursor
+| dw | delete up to start of next word _excluding_ its first character
+| d$ | delete end of line _including_ last character
+| de | delete to the end of the current word _including_ the last character
+| dd | delete the current line. **Count precedes the operator in this case**.
+Time Travel | u | undo last command
+| U | Fix line. Reverts last line altered to its previous state.
+| **CTRl**-R | Redo last command
+
+Commands
+:m <location> move lines to specified location. Defaults to current line.
+:#: Jump to the line number specified in command mode
+:#,# selects multiple lines in visual mode that can be further processed
+:sh: enter interactive shell
+:!_command_: execute command in Vim. Use for non-interactive commands
+:r _text_: Inserts the text output into the current file. Works for both files and command line redirection
+:x: save and exit
+:vsp: vertical split (tabs left and right); opens with same file by default
+:sp: same but horizontal (stacked tabs)
+:s/_text_/_replacement_/_command_ : find and replace
+Without command, replaces next occurrence
+With g, replaces every command in line
+%s replaces every occurrence in file
+#,# replaces over the specified lines
+/ and ?: search operator, find text going forward/backward
+n/N: find next/previous instance
+control-D: when typing in a command with : see available commands starting with the text
+<leader>: A key used to start many custom Vim commands. \ by default.
+
+Searching
+\zs: special character denoting starting bracket of an en expression
+\ze: same as \zs for the end of an expression
+()?+| all require the escape character in searches. {} requires one for the opening bracket.
+
+Tab completion is enabled for commands
+Commands can be chained.
+Movements can be multiplied with numbers.
+operator-number-motion: perform given action number times.
+If lines are selected in visual mode they will be saved via :w FILENAME
+To turn off an option in vimrc, prepend “no” (e.g. noic
+
+Command Mode
+control-R: redo
+u - undo
+z- fold (follow with a,c,o,r,m, or their caps to fold in different ways)
+
+Macros:
+q: Record a macro and register it to a-z.
+@: Play a macro recorded under a-z.
+
+Non-Typing Text Operations (Cut, Paste, Delete, etc.)
+d: cut
+dd: cut line
+D: Cut from cursor to end of line
+y: copy selection
+Y: copy line
+p: Paste after cursor
+P: Paste on cursor
+J: Join selected lines (next one to current one by default)
+r: Replace character under cursor
+x/X: Delete/backspace
+~: Toggle case
+>/<: Indent/unindent lines. Responds to motion commands.
+
+(/): move to the next/previous sentence as defined by periods.
+{/}: move to the next/previous paragraph (separated by newlines)
+control-f/control-b: move forward/backward one page
+gg: move to start of file
+#G: move to line # (end of file if no number)
+hjkl: movement keys
+H: move to top of window
+M: move to middle of window
+L: move to bottom of window
+$: end of line
+0: start of line
+^: start of line excluding whitespace
+w: start of next word
+e: end of current word
+b: previous word
+f/F/t/T: find next/previous character. T and t stop before the character.
+W/E/B: only accounts for whitespace
+control-o: retrace steps backward
+control-i: retrace steps forward
+%: move to next matching bracket
+*/#: find next/previous instance of word under cursor.
+m: set marks using a-z
+`: move to mark set by m
+[[/]]: Jump to next/previous { in column 0.
+
+Insertion
+A: insert at end of line
+I: insert before 1st non-space character
+o: insert on new line below
+O: insert on new line above
+R: replace mode
+s: Delete character under cursor, enter insert mode
+c: change (delete/insert)
+S: change whole line
+C: Change to end of line.
+
+Visual Mode: Operators act automatically on visual selections
+v: enter visual mode (cursor)
+V: select whole lines
+control-v: select columns (move cursor down and only high characters in same column)
+
+Moving lines:
+:<optional range>m <destination>
+
+Vim:
+-p for new tab, -o for new window
+Vim has fuzzy completion, so partial spelling works if Vim can map to the full word
+<C-W> = rezise all windows equally
+:verbose shows option
+:tabs lists tabs
+:tabn, :tabp cycles
+:tabedit <file> opens file in new tab
+<ctrl-w> hjkl, w cycles
+:noh
+Tabs take priority over windows. In a given tab only one file name is displayed.
+:<,>:s/$/,/ places commas at the end of the given line range.
+autocmd BufRead,BufNewFile *.<type> set filetype=<type>
+
 # Vim Reference
 
 ## Global

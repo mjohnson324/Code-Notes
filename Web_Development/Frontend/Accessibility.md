@@ -1,23 +1,24 @@
-du -sh path
-mv files/pattern folder
-kill pid
-kill -9 pid
-ps: pid = process id
-cmd = application
-time = CPU usage
-tty = terminal of process
-Get output as variable: var=$(terminal output) | <command>
+Consult WCAG to learn more.
 
-Rename files in bulk:
-\ls | vim -
-:%s/<names>/mv -i <pattern> <output>/g
-:w !sh
-Use & to refer to names in pattern and output
-a in Vim applies to all tabs (:qa closes all)
-Moving lines:
-:<optional range>m <destination>
+Key Qualities:
+1. Percievable (text, color)
+2. Operable (#1 is keyboard accessibility)
+3. Understandable (& predictable)
+4. Robust
 
-From Accessibility Paper:
+Go-Tos:
+Use alt-tags on images. Empty alt strings indicate images that can be ignored
+set tabindex=-1 means to ignore an element
+Use the role attribute intelligently to specify intended behavior (like "button" for anchors)
+Semantic Headings (use h's properly!)
+Be judicious with colors
+Don't substitute text with images
+16px and 1.5 line-height for body content
+12px for aside text
+set lang on html
+Use sections sparingly
+
+Major Takeaways From Accessibility Paper:
 There are a lot of disabled people, enough to establish a second Facebook
 They make bank
 Designing for them improves websites for everyone.
@@ -43,23 +44,3 @@ Anchor links: essential for navigating multi-subject pages.
 Headers: clear, meaningful, parallel. This makes finding relevant subjects a lot easier.
 Forms: near the beginning of a page. Why? Because users may try to scan the whole page instead of using a command to find them.
 Inputs: use labels! Add extra information with title attributes. Switching reader modes to check fields is overkill.
-
-
-du -sh <path>: Get directory size in human-readable format
-df: Get remaining disk space.
-
-Vim:
--p for new tab, -o for new window
-Vim has fuzzy completion, so partial spelling works if Vim can map to the full word
-<C-W> = rezise all windows equally
-:verbose shows option
-:tabs lists tabs
-:tabn, :tabp cycles
-:tabedit <file> opens file in new tab
-<ctrl-w> hjkl, w cycles
-:noh
-Tabs take priority over windows. In a given tab only one file name is displayed.
-:<,>:s/$/,/ places commas at the end of the given line range.
-autocmd BufRead,BufNewFile *.<type> set filetype=<type>
-
-Artificial Narrow Intelligence = Machine Learning
