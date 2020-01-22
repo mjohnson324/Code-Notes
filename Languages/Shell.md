@@ -38,39 +38,68 @@
 * `(`- Group and launch commands
 * `{`- Group but do not launch commands in subshell
 
+## Tricks:
+
+* Get a command's output as variable: var=$(terminal output) | <command>
+* Operate on files in bulk:
+    1. \ls | vim -
+    2. :%s/<names>/<command> -i <pattern> <output>/g
+    3. :w !sh
+    Use & to refer to names in pattern and output
+    a in Vim applies to all tabs (:qa closes all)
 ## Useful Commands
 
 * **cp** -nibr
-  * cp overwrites files without asking
-  * The last directory listed is interpreted as the target directory
-  * i asks before overwriting
-  * n prevents overwriting
-  * b backs up a file before overwriting
-  * r copies recursively (for directories)
+    * cp overwrites files without asking
+    * The last directory listed is interpreted as the target directory
+    * i asks before overwriting
+    * n prevents overwriting
+    * b backs up a file before overwriting
+    * r copies recursively (for directories)
+
 * **cat** -nbs
-  * Short for "catenate" (combines files in the order specified)
-  * Combo outputs can be redirected to new files.
-  * n numbers lines
-  * b numbers non-empty lines
-  * s combines consecutive empty lines into one
+    * Short for "catenate" (combines files in the order specified)
+    * Combo outputs can be redirected to new files.
+    * n numbers lines
+    * b numbers non-empty lines
+    * s combines consecutive empty lines into one
 
 * **less** file1 file2 file3 etc.
-  * Use for paging through a file (better than cat for long files)
-  * N numbers lines (-n undoes it)
-  * m shows % read (-M also shows current line # in view)
+    * Use for paging through a file (better than cat for long files)
+    * N numbers lines (-n undoes it)
+    * m shows % read (-M also shows current line # in view)
     * q to quit
     * G in file to go to end; g to go to beginning
     * I to ignore case in searches
     * /word to find the word or regular expression in the text
 
-* **man** _command_
-  * Look up documentation on commands in the terminal
+* **man** command
+    * Look up documentation on commands in the terminal
 
-* **du** _file_
-  * Displays file size. Can list multiple files at once. Examines directory recursively.
-  * s to show summary data (doesn't blow up terminal)
-  * h for a human-readable format
-  * c for a cumulative tally
+* **du** file
+    * Displays file size. Can list multiple files at once. Examines directory recursively.
+    * s to show summary data (doesn't blow up terminal)
+    * h for a human-readable format
+    * c for a cumulative tally
+
+* **df**
+    * Get remaining disk space
+
+* **mv** pattern path
+    * Moves all files and directories matching the pattern to the specified path
+
+* **kill** pid
+    * Terminates the given program
+    * pid refers to process id. Look up with the **ps** command
+    * 9 to force termination when a program doesn't respond
+
+* ps -u username
+    * Shows all running processes from the terminal
+    * u specifies processes run by specific users
+    * pid: process id
+    * cmd: application
+    * time: CPU usage
+    * tty: Terminal running the process
 
 ## zsh
 
@@ -79,23 +108,4 @@ Configuring zsh: `autoload -Uz zsh-newuser-install`
 `zsh-newuser-install -f`
 Understanding the completion system: `zshcompsys manual page`
 
-du -sh path
-mv files/pattern folder
-kill pid
-kill -9 pid
-ps: pid = process id
-cmd = application
-time = CPU usage
-tty = terminal of process
-Get output as variable: var=$(terminal output) | <command>
-
-Rename files in bulk:
-\ls | vim -
-:%s/<names>/mv -i <pattern> <output>/g
-:w !sh
-Use & to refer to names in pattern and output
-a in Vim applies to all tabs (:qa closes all)
-
-du -sh <path>: Get directory size in human-readable format
-df: Get remaining disk space.
 
