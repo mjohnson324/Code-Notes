@@ -122,6 +122,10 @@
 * ps -u username
     * Shows all running processes from the terminal
     * u specifies processes run by specific users
+    * e shows all processes
+    * m sorts by memory usage.
+    * L lists other viewable columns
+    * O permits selecting columns for viewing.
     * pid: process id
     * cmd: application
     * time: CPU usage

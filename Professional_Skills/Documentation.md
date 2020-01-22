@@ -25,3 +25,10 @@
 * Present your work as professional.
 * For features you have yet to implement, list them at the bottom as future directions for the project.
 * Markdown rendering errors
+
+### Versioning:
+
+* Versioning tends to follow the X.Y.Z patter:
+    * X - breaking changes
+    * Y - non-breaking changes
+    * Z - patches
