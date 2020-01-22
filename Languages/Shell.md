@@ -47,7 +47,15 @@
     3. :w !sh
     Use & to refer to names in pattern and output
     a in Vim applies to all tabs (:qa closes all)
+
 ## Useful Commands
+
+* **cat** -nbs
+    * Short for "catenate" (combines files in the order specified)
+    * Combo outputs can be redirected to new files.
+    * n numbers lines
+    * b numbers non-empty lines
+    * s combines consecutive empty lines into one
 
 * **cp** -nibr
     * cp overwrites files without asking
@@ -57,12 +65,44 @@
     * b backs up a file before overwriting
     * r copies recursively (for directories)
 
-* **cat** -nbs
-    * Short for "catenate" (combines files in the order specified)
-    * Combo outputs can be redirected to new files.
-    * n numbers lines
-    * b numbers non-empty lines
-    * s combines consecutive empty lines into one
+* **df**
+    * Get remaining disk space
+
+* **du** file
+    * Displays file size. Can list multiple files at once. Examines directory recursively.
+    * s to show summary data (doesn't blow up terminal)
+    * h for a human-readable format
+    * c for a cumulative tally
+
+* **find** path options pattern
+    * Finds files and directories matching the given pattern and conditions
+    * Find can take multiple path-option-pattern combinations.
+    * Find accepts regular expressions. If not using quotes remember to escape special characters.
+    * For the current directory add ./ at the beginning of the path
+    * name to focus on file names
+    * path to get directories and files
+    * type followed by -f or -d to get files or directories, respectively
+    * or for or expressions; without this option the default is and
+    * not or \! for negation
+    * mtime for modification by count in days
+    * mmin for modifications within minutes
+    * delete to delete files and directories matching pattern
+
+* **grep** options pattern files path
+    * Searches for patterns in files. Defaults to current directory if no path given.
+    * Useful for filtering command outputs.
+    * Add multiple names to search multiple files
+    * Regular expressions are allowed for patterns, files and path.
+    * c to get match counts
+    * n to print line numbers
+    * i to ignore case
+    * v for inverse, returning lines not matching the expression
+    * --include="ext" to search files of a specific extension
+
+* **kill** pid
+    * Terminates the given program
+    * pid refers to process id. Look up with the **ps** command
+    * 9 to force termination when a program doesn't respond
 
 * **less** file1 file2 file3 etc.
     * Use for paging through a file (better than cat for long files)
@@ -76,22 +116,8 @@
 * **man** command
     * Look up documentation on commands in the terminal
 
-* **du** file
-    * Displays file size. Can list multiple files at once. Examines directory recursively.
-    * s to show summary data (doesn't blow up terminal)
-    * h for a human-readable format
-    * c for a cumulative tally
-
-* **df**
-    * Get remaining disk space
-
 * **mv** pattern path
     * Moves all files and directories matching the pattern to the specified path
-
-* **kill** pid
-    * Terminates the given program
-    * pid refers to process id. Look up with the **ps** command
-    * 9 to force termination when a program doesn't respond
 
 * ps -u username
     * Shows all running processes from the terminal
