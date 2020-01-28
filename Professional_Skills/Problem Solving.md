@@ -1,6 +1,6 @@
 # Problem Solving
 
-Tips for completing new projects.
+## Tips for Completing New Projects
 
 1. Be as clear and detailed as possible about the problem you are trying
    to solve.
@@ -15,3 +15,12 @@ Tips for completing new projects.
   - Consider starting more abstract and drilling down to functions each component will require.
   - Also consider edge cases when writing out pseudocode.
 6. When writing code, test often to avoid bugs
+
+## Rubber Duck Debugging
+
+Articulate the problem before you ask for help.
+
+1. Verbalize the question. Detail the journey that led you to here.
+2. State your desired outcome.
+3. Describe what actually took place in your project.
+4. If you are still stuck, ask for help! Share your research and sources.
