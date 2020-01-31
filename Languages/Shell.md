@@ -68,7 +68,7 @@
 * **df**
     * Get remaining disk space
 
-* **du** file
+* **du** -shc file
     * Displays file size. Can list multiple files at once. Examines directory recursively.
     * s to show summary data (doesn't blow up terminal)
     * h for a human-readable format
@@ -88,8 +88,9 @@
     * mmin for modifications within minutes
     * delete to delete files and directories matching pattern
 
-* **grep** options pattern files path
-    * Searches for patterns in files. Defaults to current directory if no path given.
+* **grep** -cniv _regex_  _files_ _path_
+    * Searches for patterns in files.
+    * Defaults to current directory if no path given.
     * Useful for filtering command outputs.
     * Add multiple names to search multiple files
     * Regular expressions are allowed for patterns, files and path.
@@ -137,5 +138,4 @@ Switching between bash and zsh: `sudo chsh -s /bin/zsh or bash $USER`
 Configuring zsh: `autoload -Uz zsh-newuser-install`
 `zsh-newuser-install -f`
 Understanding the completion system: `zshcompsys manual page`
-
 
