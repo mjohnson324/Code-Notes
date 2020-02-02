@@ -88,7 +88,7 @@
     * mmin for modifications within minutes
     * delete to delete files and directories matching pattern
 
-* **grep** -cniv _regex_  _files_ _path_
+* **grep** -cnirv _regex_  _files_ _path_
     * Searches for patterns in files.
     * Defaults to current directory if no path given.
     * Useful for filtering command outputs.
@@ -98,6 +98,7 @@
     * n to print line numbers
     * i to ignore case
     * v for inverse, returning lines not matching the expression
+    * r for recursive searches into subdirectories
     * --include="ext" to search files of a specific extension
 
 * **kill** pid
