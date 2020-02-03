@@ -68,7 +68,7 @@
 * **df**
     * Get remaining disk space
 
-* **du** file
+* **du** -shc file_or_directory
     * Displays file size. Can list multiple files at once. Examines directory recursively.
     * s to show summary data (doesn't blow up terminal)
     * h for a human-readable format
