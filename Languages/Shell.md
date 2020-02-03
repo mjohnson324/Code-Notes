@@ -88,8 +88,9 @@
     * mmin for modifications within minutes
     * delete to delete files and directories matching pattern
 
-* **grep** options pattern files path
-    * Searches for patterns in files. Defaults to current directory if no path given.
+* **grep** -cnirv _regex_  _files_ _path_
+    * Searches for patterns in files.
+    * Defaults to current directory if no path given.
     * Useful for filtering command outputs.
     * Add multiple names to search multiple files
     * Regular expressions are allowed for patterns, files and path.
@@ -97,6 +98,7 @@
     * n to print line numbers
     * i to ignore case
     * v for inverse, returning lines not matching the expression
+    * r for recursive searches into subdirectories
     * --include="ext" to search files of a specific extension
 
 * **kill** pid
@@ -137,5 +139,4 @@ Switching between bash and zsh: `sudo chsh -s /bin/zsh or bash $USER`
 Configuring zsh: `autoload -Uz zsh-newuser-install`
 `zsh-newuser-install -f`
 Understanding the completion system: `zshcompsys manual page`
-
 
