@@ -8,9 +8,3 @@ int main(int argc, char *argv[])
 
     return 0;
 }
-
-/*
- Compiles without a return statement
- Does not compile with a string as the return
- Compiles without inputs
- */
