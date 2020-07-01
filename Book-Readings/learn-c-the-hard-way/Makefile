@@ -1,7 +1,9 @@
 CFLAGS=-Wall -g
 
-all: exercise_13
+all: exercise_15
 
+#exercise_14
+#exercise_13
 #exercise_12
 #exercise_11
 #exercise_10 exercise_10_ifelse exercise_10_nocaps
@@ -12,8 +14,10 @@ all: exercise_13
 #exercise_09
 
 clean:
-	rm -f exercise_13
+	rm -f exercise_15
 
+#rm -f exercise_14
+#rm -f exercise_13
 #rm -f exercise_12
 #rm -f exercise_11
 #rm -f exercise_10 exercise_10_ifelse exercise_10_nocaps
