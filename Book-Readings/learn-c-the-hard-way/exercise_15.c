@@ -50,7 +50,7 @@ int main(int argc, char *argv[])
 
     //extra credit: print the addresses
     for(i = 0; i < count; i++) {
-        printf("%s lives at %p.\n", *(cur_name + i + 1), &names[i]);
+        printf("%s lives at %p.\n", *(cur_name + i + 1), (cur_name + i + 1));
     }
 
     return 0;
